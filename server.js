@@ -1,12 +1,18 @@
-const express=require('express');
-const app=express();
+const http=require('http');
+const hostname='0.0.0.0';
+const port=80;
 
-app.get('/sayHello',(req,res)=>{
-res.json({message:"Hello,User"})
+const server=http.createServer((req,res)=>{
+if(req.url==='/sayHello'){
+res.statusCode=200;
+res.setHeader('Content-Type','application/json');
+res.end(JSON,stringify({message:"Hello User"}));
+}else{
+res.statusCode=404;
+res.end('Not Found');
+}
 });
 
-app.listen(80,()=>{
-console.log('Server running on port 80');
+server.listen(port,hostname,()=>{
+console.log('server running at hostname: ${hostname},port: ${port}/');
 });
-
-
