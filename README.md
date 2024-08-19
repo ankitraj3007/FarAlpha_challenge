@@ -59,16 +59,8 @@ Replace <VM_IP> with the public IP address of your virtual machine.
 You should receive the following response:
 
 json
-Copy code
 {"message": "Hello User"}
-Troubleshooting
-Port Already in Use: If you encounter the error EADDRINUSE, it means port 80 is already in use. Consider changing the port in server.js and restarting the server.
-Server Not Responding: Ensure that your VM’s firewall allows inbound traffic on port 80. Check the server logs for errors.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
-For questions or support, please contact your-email@example.com.
 
 markdown
 Copy code
